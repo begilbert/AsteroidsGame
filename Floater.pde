@@ -5,6 +5,7 @@ abstract class Floater {
   protected float rad = (float)(theta * Math.PI/180);
   protected ArrayList<ArrayList<Integer>> corners = new ArrayList<ArrayList<Integer>>();
   //abstract methods
+  /*
   abstract public void setCoords(int x, int y);
   abstract public int getCoords();
   
@@ -13,6 +14,7 @@ abstract class Floater {
   
   abstract public void setTheta(int th);
   abstract public int getTheta();
+  */
   //standard methods
   public void addCoords(int x, int y) {
     ArrayList<Integer> xyCoords = new ArrayList<Integer>();
