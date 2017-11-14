@@ -1,10 +1,11 @@
-//your variable declarations here
-public void setup() 
-{
-  //your code here
+Spaceship ship;
+void settings() {
+  size(500, 500);
 }
-public void draw() 
-{
-  //your code here
+void setup() {
+  ship = new Spaceship();
 }
-
+void draw() {
+  ship.show();
+}
+  
