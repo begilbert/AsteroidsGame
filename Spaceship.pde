@@ -1,77 +1,145 @@
-class Spaceship extends Floater {
-  public Spaceship() {
-    /* Coordinates:
-(0, 8)
-(0, 16)
-(1, 16)
-(1, 15)
-(2, 15)
-(2, 14)
-(3, 14)
-(3, 13)
-(4, 13)
-(4, 15)
-(6, 15)
-(6, 14)
-(7, 14)
-(7, 16)
-(8, 16)
-(8, 0)
-(7, 0)
-(7, 3)
-(6, 3)
-(6, 7)
-(5, 7)
-(5, 8)
-(4, 8)
-(4, 6)
-(3, 6)
-(3, 11)
-(2, 11)
-(2, 12)
-(1, 12)
-(1, 8)
-*/
-
-super.addCoords(0, 8);
-super.addCoords(0, 16);
-super.addCoords(1, 16);
-super.addCoords(1, 15);
-super.addCoords(2, 15);
-super.addCoords(2, 14);
-super.addCoords(3, 14);
-super.addCoords(3, 13);
-super.addCoords(4, 13);
-super.addCoords(4, 15);
-super.addCoords(6, 15);
-super.addCoords(6, 14);
-super.addCoords(7, 14);
-super.addCoords(7, 16);
-super.addCoords(8, 16);
-super.addCoords(8, 0);
-super.addCoords(7, 0);
-super.addCoords(7, 3);
-super.addCoords(6, 3);
-super.addCoords(6, 7);
-super.addCoords(5, 7);
-super.addCoords(5, 8);
-super.addCoords(4, 8);
-super.addCoords(4, 6);
-super.addCoords(3, 6);
-super.addCoords(3, 11);
-super.addCoords(2, 11);
-super.addCoords(2, 12);
-super.addCoords(1, 12);
-super.addCoords(1, 8);
-
-
-
-    //
-    xCoords = yCoords = 250;
-    xDirection = yDirection = 0;
-    theta = 0;
-  }
-  public void show (boolean jets) {
-    super.show();
-  }
+class SpaceShip extends Floater  
+{   
+  public SpaceShip()
+  {
+      corners = 60;
+      xCorners = new int [corners];
+      yCorners = new int [corners];
+xCorners[0] = -24; 
+ yCorners[0] = 0;
+xCorners[1] = -48; 
+ yCorners[1] = 0;
+xCorners[2] = -48; 
+ yCorners[2] = 3;
+xCorners[3] = -45; 
+ yCorners[3] = 3;
+xCorners[4] = -45; 
+ yCorners[4] = 6;
+xCorners[5] = -42; 
+ yCorners[5] = 6;
+xCorners[6] = -42; 
+ yCorners[6] = 9;
+xCorners[7] = -39; 
+ yCorners[7] = 9;
+xCorners[8] = -39; 
+ yCorners[8] = 12;
+xCorners[9] = -45; 
+ yCorners[9] = 12;
+xCorners[10] = -45; 
+ yCorners[10] = 18;
+xCorners[11] = -42; 
+ yCorners[11] = 18;
+xCorners[12] = -42; 
+ yCorners[12] = 21;
+xCorners[13] = -48; 
+ yCorners[13] = 21;
+xCorners[14] = -48; 
+ yCorners[14] = 24;
+xCorners[15] = 0; 
+ yCorners[15] = 24;
+xCorners[16] = 0; 
+ yCorners[16] = 21;
+xCorners[17] = -9; 
+ yCorners[17] = 21;
+xCorners[18] = -9; 
+ yCorners[18] = 18;
+xCorners[19] = -21; 
+ yCorners[19] = 18;
+xCorners[20] = -21; 
+ yCorners[20] = 15;
+xCorners[21] = -24; 
+ yCorners[21] = 15;
+xCorners[22] = -24; 
+ yCorners[22] = 12;
+xCorners[23] = -18; 
+ yCorners[23] = 12;
+xCorners[24] = -18; 
+ yCorners[24] = 9;
+xCorners[25] = -33; 
+ yCorners[25] = 9;
+xCorners[26] = -33; 
+ yCorners[26] = 6;
+xCorners[27] = -36; 
+ yCorners[27] = 6;
+xCorners[28] = -36; 
+ yCorners[28] = 3;
+xCorners[29] = -24; 
+ yCorners[29] = 3;
+xCorners[30] = -24; 
+ yCorners[30] = 48;
+xCorners[31] = -48; 
+ yCorners[31] = 48;
+xCorners[32] = -48; 
+ yCorners[32] = 45;
+xCorners[33] = -45; 
+ yCorners[33] = 45;
+xCorners[34] = -45; 
+ yCorners[34] = 42;
+xCorners[35] = -42; 
+ yCorners[35] = 42;
+xCorners[36] = -42; 
+ yCorners[36] = 39;
+xCorners[37] = -39; 
+ yCorners[37] = 39;
+xCorners[38] = -39; 
+ yCorners[38] = 36;
+xCorners[39] = -45; 
+ yCorners[39] = 36;
+xCorners[40] = -45; 
+ yCorners[40] = 30;
+xCorners[41] = -42; 
+ yCorners[41] = 30;
+xCorners[42] = -42; 
+ yCorners[42] = 27;
+xCorners[43] = -48; 
+ yCorners[43] = 27;
+xCorners[44] = -48; 
+ yCorners[44] = 24;
+xCorners[45] = 0; 
+ yCorners[45] = 24;
+xCorners[46] = 0; 
+ yCorners[46] = 27;
+xCorners[47] = -9; 
+ yCorners[47] = 27;
+xCorners[48] = -9; 
+ yCorners[48] = 30;
+xCorners[49] = -21; 
+ yCorners[49] = 30;
+xCorners[50] = -21; 
+ yCorners[50] = 33;
+xCorners[51] = -24; 
+ yCorners[51] = 33;
+xCorners[52] = -24; 
+ yCorners[52] = 36;
+xCorners[53] = -18; 
+ yCorners[53] = 36;
+xCorners[54] = -18; 
+ yCorners[54] = 39;
+xCorners[55] = -33; 
+ yCorners[55] = 39;
+xCorners[56] = -33; 
+ yCorners[56] = 42;
+xCorners[57] = -36; 
+ yCorners[57] = 42;
+xCorners[58] = -36; 
+ yCorners[58] = 45;
+xCorners[59] = -24; 
+ yCorners[59] = 45;
+      myColor = color(255,0,0);
+      myCenterX = 250;
+      myCenterY = 250;
+      myDirectionX = 0;
+      myDirectionY = 0;
+      myPointDirection = 0;
+    }
+    public void setX(int x){myCenterX = x;}
+    public int getX(){return (int)myCenterX;}   
+    public void setY(int y){myCenterY = y;}   
+    public int getY(){return (int)myCenterY;}   
+    public void setDirectionX(double x){myDirectionX = x;}   
+    public double getDirectionX(){return myDirectionX;}   
+    public void setDirectionY(double y){myDirectionY = y;}   
+    public double getDirectionY(){return myDirectionY;}   
+    public void setPointDirection(int degrees){myPointDirection = degrees;}   
+    public double getPointDirection(){return myPointDirection;} 
 }
